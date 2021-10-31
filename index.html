@@ -25,5 +25,27 @@
             </ul>
         </section>
     </div>
+
+    <script>
+        const tasks = []
+
+        function addTask(text){
+            tasks.push(text)
+        }
+
+        function removeTask(index){
+            tasks.splice(index, 1)
+        }
+
+        const btnElemet = document.querySelector("#form button")
+        const inputElemet = document.querySelector("#form input")
+
+        btnElemet.onclick = () => {
+            if(inputElemet.value){
+                addTask(inputElemet.value);
+                inputElemet.value = '';
+            }
+        } 
+    </script>
 </body>
 </html>
